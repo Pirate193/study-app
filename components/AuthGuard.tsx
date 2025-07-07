@@ -9,16 +9,18 @@ export default function AuthGuard({children}:{children:ReactNode}) {
     const router =useRouter()
 
     useEffect(()=>{
+        console.log('Authguard:',{user,segments,isInitialized})
         if(!isInitialized) return
         const inAuthGroup = segments[0]==='(auth)'
 
         if(!user && !inAuthGroup){
             //redirect to signin if not authenticated
-            router.replace('/(auth)/signin')
+            setTimeout(() => router.replace('/(auth)/signin'), 0);
 
         }else if (user && inAuthGroup){
             //redirect to  main app 
-            router.replace('/(tabs)')
+            setTimeout(() => router.replace('/(tabs)'), 0);
+          
         }
     },[user,isInitialized,segments])
 
@@ -29,5 +31,5 @@ export default function AuthGuard({children}:{children:ReactNode}) {
             </View>
         )
     }
-    return<>{children} </>
+    return<>{children}</>
 }
