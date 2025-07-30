@@ -6,8 +6,9 @@ import { StyleSheet, Text, View } from 'react-native'
 const StudySetScreen = () => {
     const { id } = useLocalSearchParams()
   return (
-    <View>
-      <Text> {id} </Text>
+    <View  className='bg-primary p-2 m-2' >
+      <Text className='font-bold text-white' > get details of user {id} </Text>
+      
     </View>
   )
 }

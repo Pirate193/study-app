@@ -18,7 +18,7 @@ export default function TabsLayout(){
              tabBarInactiveTintColor:"#999",
              tabBarStyle:{
                 
-                 height: Platform.OS === 'android' ? 60 : 80,
+           height: Platform.OS === 'android' ? 60 : 80,
             paddingBottom: 10,
             paddingTop: 5,
             backgroundColor: '#000000',

@@ -1,4 +1,4 @@
-import { darkTheme } from '@/lib/color';
+import { dark, darkTheme } from '@/lib/color';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -22,8 +22,8 @@ const StudyCard = ({studySet,onPress}:Props) => {
   return (
     <TouchableOpacity  style={styles.card} onPress={onPress} >
             <Text style={styles.title}>{studySet.title} </Text>
-            <Text style={[styles.course,{color:darkTheme.text}]} >{studySet.course} </Text>
-            <Text style={[styles.description,{color:darkTheme.text}]}>{studySet.description}</Text>
+            <Text style={[styles.course,{color:dark.text}]} >{studySet.course} </Text>
+            <Text style={[styles.description,{color:dark.text}]}>{studySet.description}</Text>
      <View style={styles.stats} >
         <Text style={{color:darkTheme.textSecondary,fontSize:14}}>Notes: {studySet.notesCount}</Text>
         <Text style={{color:darkTheme.textSecondary,fontSize:14}}>Flashcards: {studySet.flashcardCount}</Text>
@@ -44,7 +44,7 @@ export default StudyCard
 
 const styles = StyleSheet.create({
     card:{
-        backgroundColor:darkTheme.card,
+        backgroundColor:dark.bglight,
         padding: 16,
         borderRadius: 8,
         margin: 8,
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:18,
-        color:darkTheme.text,
+        color:dark.text,
         fontWeight:'600',
     },
     course:{
