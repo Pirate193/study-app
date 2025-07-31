@@ -1,6 +1,7 @@
 import { useAuthStore } from "@/store/authStore";
 import { Stack } from "expo-router";
 import { useEffect } from "react";
+import '../global.css';
 
 export default function RootLayout() {
   const initialize = useAuthStore((state)=> state.initialize)

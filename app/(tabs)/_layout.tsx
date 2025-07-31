@@ -54,7 +54,7 @@ export default function TabsLayout(){
             <Tabs.Screen name="library" options={{title:"Library" }} />
             <Tabs.Screen name="schedule" options={{title:"Schedule" }} />
             <Tabs.Screen name="profile" options={{ title:"Profile" }} />
-        </Tabs>
-     </AuthGuard>
+        </Tabs> 
+     </AuthGuard>   
     )
 }
